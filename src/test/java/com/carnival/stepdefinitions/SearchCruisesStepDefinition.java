@@ -4,7 +4,7 @@ import com.carnival.exceptions.GeneralExceptions;
 import com.carnival.models.CruiseInformation;
 import com.carnival.questions.ResultsSearch;
 import com.carnival.tasks.FilterByPrice;
-import com.carnival.tasks.SelectCruises;
+import com.carnival.tasks.SearchCruises;
 
 import com.carnival.utils.enums.Page;
 import cucumber.api.java.en.And;
@@ -39,7 +39,7 @@ public class SearchCruisesStepDefinition {
 
     @When("^select sail to the Bahamas and duration between six and nine days$")
     public void selectSailToTheBahamasAndDurationBetweenSixAndNineDays(List<CruiseInformation> cruiseInformation) {
-        actorNamed.attemptsTo(SelectCruises.betweenSixAndNineDays(cruiseInformation));
+        actorNamed.attemptsTo(SearchCruises.betweenSixAndNineDays(cruiseInformation));
     }
 
     @And("^I select a price range using the slide bar$")
@@ -51,6 +51,7 @@ public class SearchCruisesStepDefinition {
     public void iCanSeeTheResultsForTheAssignedPrice() {
         actorNamed.should(GivenWhenThen.seeThat(ResultsSearch.toPricing(), Matchers.equalTo("1 results")).orComplainWith(GeneralExceptions.class, MESSAGE_ERROR_FILTERED_BY_PRICE));
     }
+
 
 
 }
