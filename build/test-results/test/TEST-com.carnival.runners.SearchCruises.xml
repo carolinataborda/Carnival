@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.carnival.runners.SearchCruises" tests="0" skipped="0" failures="0" errors="0" timestamp="1970-01-01T00:00:00" hostname="LAPTOP-T6IPL1RK" time="0.0">
+  <properties/>
+  <system-out><![CDATA[
+?[31mFailed scenarios:?[0m
+?[31msrc/test/resources/features/search_cruises.feature:9 ?[0m# Validate that the cruises are displayed as a grid
+
+1 Scenarios (?[31m1 failed?[0m)
+3 Steps (?[31m1 failed?[0m, ?[36m1 skipped?[0m, ?[32m1 passed?[0m)
+2m2,188s
+
+org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome=90.0.4430.85)
+Build info: version: '3.141.5', revision: 'd54ebd709a', time: '2018-11-06T11:42:16'
+System info: host: 'LAPTOP-T6IPL1RK', ip: '192.168.1.15', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_241'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 90.0.4430.85, chrome: {chromedriverVersion: 89.0.4389.23 (61b08ee2c5002..., userDataDir: C:\Users\JUANPA~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:57038}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: ignore, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: c8dc1c8dfbe72bdd0c2062271950b531
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at net.serenitybdd.core.pages.WebElementFacadeImpl.click(WebElementFacadeImpl.java:1040)
+	at net.serenitybdd.screenplay.actions.ClickOnTarget.performAs(ClickOnTarget.java:13)
+	at net.serenitybdd.screenplay.actions.ClickOnTarget$$EnhancerByCGLIB$$e3f2ec6d.CGLIB$performAs$0(<generated>)
+	at net.serenitybdd.screenplay.actions.ClickOnTarget$$EnhancerByCGLIB$$e3f2ec6d$$FastClassByCGLIB$$eb009f51.invoke(<generated>)
+	at net.sf.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228)
+	at net.thucydides.core.steps.StepInterceptor.invokeMethod(StepInterceptor.java:464)
+	at net.thucydides.core.steps.StepInterceptor.executeTestStepMethod(StepInterceptor.java:449)
+	at net.thucydides.core.steps.StepInterceptor.runTestStep(StepInterceptor.java:424)
+	at net.thucydides.core.steps.StepInterceptor.runOrSkipMethod(StepInterceptor.java:165)
+	at net.thucydides.core.steps.StepInterceptor.testStepResult(StepInterceptor.java:152)
+	at net.thucydides.core.steps.StepInterceptor.intercept(StepInterceptor.java:70)
+	at net.serenitybdd.screenplay.actions.ClickOnTarget$$EnhancerByCGLIB$$e3f2ec6d.performAs(<generated>)
+	at net.serenitybdd.screenplay.Actor.performTask(Actor.java:181)
+	at net.serenitybdd.screenplay.Actor.perform(Actor.java:162)
+	at net.serenitybdd.screenplay.Actor.attemptsTo(Actor.java:143)
+	at com.carnival.tasks.SelectCruises.performAs(SelectCruises.java:18)
+	at com.carnival.tasks.SelectCruises$$EnhancerByCGLIB$$462f57f5.CGLIB$performAs$0(<generated>)
+	at com.carnival.tasks.SelectCruises$$EnhancerByCGLIB$$462f57f5$$FastClassByCGLIB$$9c00fd5a.invoke(<generated>)
+	at net.sf.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228)
+	at net.thucydides.core.steps.StepInterceptor.invokeMethod(StepInterceptor.java:464)
+	at net.thucydides.core.steps.StepInterceptor.executeTestStepMethod(StepInterceptor.java:449)
+	at net.thucydides.core.steps.StepInterceptor.runTestStep(StepInterceptor.java:424)
+	at net.thucydides.core.steps.StepInterceptor.runOrSkipMethod(StepInterceptor.java:165)
+	at net.thucydides.core.steps.StepInterceptor.testStepResult(StepInterceptor.java:152)
+	at net.thucydides.core.steps.StepInterceptor.intercept(StepInterceptor.java:70)
+	at com.carnival.tasks.SelectCruises$$EnhancerByCGLIB$$462f57f5.performAs(<generated>)
+	at net.serenitybdd.screenplay.Actor.performTask(Actor.java:181)
+	at net.serenitybdd.screenplay.Actor.perform(Actor.java:162)
+	at net.serenitybdd.screenplay.Actor.attemptsTo(Actor.java:143)
+	at com.carnival.stepdefinitions.SearchCruisesStepDefinition.selectSailToTheBahamasAndDurationBetweenSixAndNineDays(SearchCruisesStepDefinition.java:33)
+	at ?.select sail to the Bahamas and duration between six and nine days(src/test/resources/features/search_cruises.feature:10)
+
+]]></system-out>
+  <system-err><![CDATA[[Test worker] INFO net.thucydides.core.steps.ConsoleLoggingListener - ?[96m
+
+-------------------------------------------------------------------------------------
+     _______. _______ .______       _______ .__   __.  __  .___________.____    ____ 
+    /       ||   ____||   _  \     |   ____||  \ |  | |  | |           |\   \  /   / 
+   |   (----`|  |__   |  |_)  |    |  |__   |   \|  | |  | `---|  |----` \   \/   /  
+    \   \    |   __|  |      /     |   __|  |  . `  | |  |     |  |       \_    _/   
+.----)   |   |  |____ |  |\  \----.|  |____ |  |\   | |  |     |  |         |  |     
+|_______/    |_______|| _| `._____||_______||__| \__| |__|     |__|         |__|    
+                                                                                     
+ News and tutorials at http://www.serenity-bdd.info                                  
+ Documentation at https://wakaleo.gitbooks.io/the-serenity-book/content/             
+ Join the Serenity Community on Rocket Chat at https://serenity-bdd.rocket.chat      
+ Serenity BDD Support and Training at http://serenity-bdd.info/#/trainingandsupport  
+ Learn Serenity BDD online at http://serenity-dojo.com                               
+-------------------------------------------------------------------------------------
+?[0m
+[Test worker] INFO net.thucydides.core.steps.ConsoleLoggingListener - Test Suite Started: Validate search cruises to the Bahamas
+[Test worker] INFO net.thucydides.core.steps.ConsoleLoggingListener - 
+ _____ _____ ____ _____   ____ _____  _    ____ _____ _____ ____  
+|_   _| ____/ ___|_   _| / ___|_   _|/ \  |  _ \_   _| ____|  _ \ 
+  | | |  _| \___ \ | |   \___ \ | | / _ \ | |_) || | |  _| | | | |
+  | | | |___ ___) || |    ___) || |/ ___ \|  _ < | | | |___| |_| |
+  |_| |_____|____/ |_|   |____/ |_/_/   \_\_| \_\|_| |_____|____/ 
+                                                                  
+
+TEST STARTED: Validate that the cruises are displayed as a grid
+-------------------------------------------------------------------(validate-search-cruises-to-the-bahamas;validate-that-the-cruises-are-displayed-as-a-grid)
+[Test worker] ERROR net.thucydides.core.steps.ConsoleLoggingListener - ?[91m
+           __  _____ _____ ____ _____   _____ _    ___ _     _____ ____  
+  _       / / |_   _| ____/ ___|_   _| |  ___/ \  |_ _| |   | ____|  _ \ 
+ (_)_____| |    | | |  _| \___ \ | |   | |_ / _ \  | || |   |  _| | | | |
+  _|_____| |    | | | |___ ___) || |   |  _/ ___ \ | || |___| |___| |_| |
+ (_)     | |    |_| |_____|____/ |_|   |_|/_/   \_\___|_____|_____|____/ 
+          \_\                                                            
+
+TEST FAILED WITH ERROR: Validate that the cruises are displayed as a grid
+---------------------------------------------------------------------?[0m
+[Test worker] ERROR net.thucydides.core.steps.ConsoleLoggingListener - ?[91mTEST FAILED AT STEP Carolina clicks on Close Notice?[0m
+[Test worker] ERROR net.thucydides.core.steps.ConsoleLoggingListener - element not interactable
+]]></system-err>
+</testsuite>
