@@ -8,8 +8,9 @@ import org.junit.runner.RunWith;
 
 @RunWith(CucumberWithSerenity.class)
 @CucumberOptions(
-        features = "src/test/resources/features/search_cruises.feature"
-        ,glue = "com.carnival.stepdefinitions",
+        features = "src/test/resources/features/search_cruises.feature",
+        glue = {"com.carnival.stepdefinitions", "com.carnival.hook"},
+        tags = "@ValidateView",
         snippets = SnippetType.CAMELCASE
 )
 public class SearchCruises {

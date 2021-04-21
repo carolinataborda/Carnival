@@ -1,5 +1,7 @@
 package com.carnival.stepdefinitions;
 
+import com.carnival.exceptions.GeneralExceptions;
+import com.carnival.models.CruiseInformation;
 import com.carnival.questions.ResultsSearch;
 import com.carnival.tasks.FilterByPrice;
 import com.carnival.tasks.SelectCruises;
@@ -17,6 +19,9 @@ import net.serenitybdd.screenplay.actions.Open;
 import net.thucydides.core.annotations.Managed;
 import org.hamcrest.Matchers;
 import org.openqa.selenium.WebDriver;
+import java.util.List;
+
+import static com.carnival.utils.Constants.MESSAGE_ERROR_FILTERED_BY_PRICE;
 
 public class SearchCruisesStepDefinition {
 
@@ -26,15 +31,15 @@ public class SearchCruisesStepDefinition {
 
     @Given("^i enter the url \"([^\"]*)\"$")
     public void iEnterTheUrl(String carnival) {
-    
+
         actorNamed.can(BrowseTheWeb.with(navegador));
         actorNamed.wasAbleTo(Open.url(Page.getUrl(carnival)));
     }
 
-    @When("^select sail to the Bahamas and duration between six and nine days$")
-    public void selectSailToTheBahamasAndDurationBetweenSixAndNineDays()  {
-        actorNamed.attemptsTo(SelectCruises.betweenSixAndNineDays());
 
+    @When("^select sail to the Bahamas and duration between six and nine days$")
+    public void selectSailToTheBahamasAndDurationBetweenSixAndNineDays(List<CruiseInformation> cruiseInformation) {
+        actorNamed.attemptsTo(SelectCruises.betweenSixAndNineDays(cruiseInformation));
     }
 
     @And("^I select a price range using the slide bar$")
@@ -44,6 +49,8 @@ public class SearchCruisesStepDefinition {
 
     @Then("^I can see the results for the assigned price$")
     public void iCanSeeTheResultsForTheAssignedPrice() {
-        actorNamed.should(GivenWhenThen.seeThat(ResultsSearch.toPricing(), Matchers.equalTo("1 results")));
+        actorNamed.should(GivenWhenThen.seeThat(ResultsSearch.toPricing(), Matchers.equalTo("1 results")).orComplainWith(GeneralExceptions.class, MESSAGE_ERROR_FILTERED_BY_PRICE));
     }
+
+
 }
