@@ -12,6 +12,12 @@ This project contains automated tests carried out with the screenplay pattern of
 2. Git
 3. IntelliJ
 4. Gradle
+5. ChromeDrive
+
+
+## ⚙️ Ejecution ⚙️
+
+Gradle clean test
 
 ## ✒️ Autores ✒️
 * **Carolina Taborda** 
