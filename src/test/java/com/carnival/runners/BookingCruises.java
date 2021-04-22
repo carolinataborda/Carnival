@@ -11,7 +11,6 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = "src/test/resources/features/booking_cruises.feature",
         glue = {"com.carnival.stepdefinitions", "com.carnival.hook"},
-        tags = "@ValidateView",
         snippets = SnippetType.CAMELCASE
 )
 public class BookingCruises {

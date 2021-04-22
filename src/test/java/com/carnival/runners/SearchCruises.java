@@ -1,6 +1,5 @@
 package com.carnival.runners;
 
-
 import cucumber.api.CucumberOptions;
 import cucumber.api.SnippetType;
 import net.serenitybdd.cucumber.CucumberWithSerenity;
@@ -10,7 +9,6 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = "src/test/resources/features/search_cruises.feature",
         glue = {"com.carnival.stepdefinitions", "com.carnival.hook"},
-        tags = "@ValidateView",
         snippets = SnippetType.CAMELCASE
 )
 public class SearchCruises {
