@@ -17,7 +17,7 @@ This project contains automated tests carried out with the screenplay pattern of
 
 ## ⚙️ Ejecution ⚙️
 
-Gradle clean test
+Run command Gradle clean test
 
 ## ✒️ Autores ✒️
 * **Carolina Taborda** 
